@@ -1,0 +1,23 @@
+//Get data from routes/sensors
+GET http://localhost:3000/sensors
+
+###
+//Get data from routes/sensors/:id
+GET http://localhost:3000/sensors/6160536b4ffce63a7c091fa5
+
+###
+// Create a data from sensors
+POST http://localhost:3000/sensors
+Content-Type: application/json    
+
+{
+    "temp": "",
+    "humidity": "62",
+    "pressure": "1002",
+    "lightIntensity": "4500"  
+}
+
+
+###
+//Delete all data
+DELETE http://localhost:3000/sensors/
