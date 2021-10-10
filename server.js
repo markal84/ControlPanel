@@ -3,6 +3,7 @@ require('dotenv').config();  // required to process.env
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
+const cors = require('cors');  //use to access API resources (no-cors property in fetch not working)
 
 
 //Connect to local mongodb database
@@ -19,6 +20,13 @@ app.listen(3000, () => console.log('Server Running'));
 
 //Middleware
 app.use(express.json());
+
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+  });
+
 
 //Routes
 const sensorsRouter = require('./routes/sensors')
