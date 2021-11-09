@@ -1,8 +1,8 @@
 function fetchData(){
-    fetch("http://localhost:3000/sensors")  //no-cors property disabled, used cors npm package instead
+    fetch("http://localhost:3000/sensors")  //'no-cors' property disabled, used cors npm package instead
     .then((res) => res.json())
     .then((data) => {
-        console.log(data)
+       // console.log(data)
         let output = '<h2>Data</h2>';
         data.forEach(function(sensor){
             output += `

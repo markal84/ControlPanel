@@ -21,7 +21,7 @@ router.get('/:id', getData, (req, res) => {
 //Creating one - for now dummy data created by user, later data from sensors
 router.post('/', async (req, res) => {
     const data = new sensorData({
-        temp: (Math.floor(Math.random() * 23) + 3),     // for create random temp, later data from sensor
+        temp: (Math.floor(Math.random() * (30 - 15 + 1) + 15)),     // for create random temp, later data from sensor
         humidity: req.body.humidity,
         pressure: req.body.pressure,
         lightIntensity: req.body.lightIntensity

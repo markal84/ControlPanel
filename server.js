@@ -3,7 +3,7 @@ require('dotenv').config();  // required to process.env
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
-const cors = require('cors');  //use to access API resources (no-cors property in fetch not working)
+const cors = require('cors');  //use to access API resources witch fetch (no-cors property in fetch not working)
 
 
 //Connect to local mongodb database
